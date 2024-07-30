@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Imc</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onkeydown="enter(event)">
+
+    <div class="background">
+        <section class="container">
+            <!-- Cabeçalho -->
+            <header class="cabeçalho">
+                <h1>Calculadora - IMC</h1>
+                <hr class="linha">
+            </header>
+
+            <!-- Formulario -->
+            <div class="formulario">
+                <div class="div-sugestao-ativar">
+                    <p class="sugestao-ativar" onclick="ativar()">?</p>
+                </div>
+                <section class="sugestao">
+                    <header>
+                        <div class="ativadores">
+
+                            
+                            <p class="sugestao-desativar" onclick="desativar()">X</p>
+    
+                        </div>
+                    </header>
+
+                   <div class="conteudo"> 
+                    <p>Ponha uma virgula para diferenciar metro dos centrimetros. <br><br>
+                        Exemplo:
+                    </p>
+
+                    <img src="src/video/GifInputAltura.gif"></img>
+                   </div>
+                </section>
+                <label for="nome">Nome</label>
+                <input id="nome" class="nome" type="text" autocomplete="off"><br>
+
+
+
+                <label for="altura">Altura</label>
+                <input id="altura" class="altura" type="number" min="0" required><span class="validacao display">Valor
+                    Incorreto</span><br>
+
+                <label for="peso">Peso&nbsp;&nbsp;</label>
+                <input id="peso" class="peso" type="number" min="0" required><span class="validacao display">Valor
+                    Incorreto</span><br>
+
+                <button onclick="puxar()" class="btn">Calcular</button>
+
+                <div class="texto"></div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
