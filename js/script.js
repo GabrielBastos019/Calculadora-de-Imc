@@ -29,7 +29,6 @@ function enter(event) {
         return
     }
 }
-
 //Puxando informações
 function puxar() {
     var nome = document.getElementsByClassName("nome")[0]
@@ -67,7 +66,7 @@ function show(imc, nome, msg) {
 //Função que valida os dados
 function validacao(nome, altura, peso, msg, spans) {
     var imc = peso.value / (altura.value * altura.value)
-    b
+    
     if (altura.value == "" || altura.value < 0) {
         spans[0].classList.remove("display")
         altura.classList.add("negativo")
@@ -77,7 +76,6 @@ function validacao(nome, altura, peso, msg, spans) {
         spans[0].classList.add("display")
         altura.validity.valid = true
     }
-
     if (peso.value == "" || peso.value < 0) {
         spans[1].classList.remove("display")
         peso.classList.add("negativo")
